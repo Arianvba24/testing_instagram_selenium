@@ -33,7 +33,7 @@ driver.implicitly_wait(10)
 def login_to_instagram(driver, user, passwd):
     try:
         driver.get("https://www.instagram.com/")
-        time.sleep(15)
+        time.sleep(5)
         
         # Aceptar cookies
         try:
