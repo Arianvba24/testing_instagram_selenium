@@ -1,3 +1,5 @@
 streamlit
 seleniumbase
 webdriver-manager
+beautifulsoup4==4.9.3
+pandas==2.2.3
