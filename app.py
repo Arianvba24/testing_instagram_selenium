@@ -51,7 +51,7 @@ driver = webdriver.Chrome(options=options)
  
 
 driver.get("https://www.instagram.com/")
-st.title("Fase 1 pasada")
+
 
 try:
 
