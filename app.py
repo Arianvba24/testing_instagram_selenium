@@ -284,5 +284,6 @@ try:
     
 
 except:
+    st.title("Error")
     driver.close()
     driver.quit()
