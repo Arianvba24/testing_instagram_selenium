@@ -17,7 +17,10 @@ def get_driver():
 options = Options()
 options.add_argument("--disable-gpu")
 options.add_argument("--headless")
-
+options.add_argument('--disable-extensions')
+options.add_argument('--ignore-certificate-errors-spki-list')
+options.add_argument("--disable-blink-features=AutomationControlled")
+options.add_argument('--ignore-ssl-errors')
 
 user = "ferragutarian@gmail.com"
 passwd = "03051997Leandro*"
@@ -26,7 +29,7 @@ passwd = "03051997Leandro*"
 
 # chrome_options.add_argument('--headless')
 
-driver = webdriver.Chrome(options=chrome_options)
+driver = webdriver.Chrome(options=options)
 
 
 # with open(r"C:\Users\Cash\Proyectos\092024\Instagram bot\cookies.json") as j:
