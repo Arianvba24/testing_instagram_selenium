@@ -52,7 +52,7 @@ driver = webdriver.Chrome(options=options)
 #     except Exception as e:
 #         print(f"Error al agregar la cookie {cookie}: {e}") 
  
-
+driver.implicitly_wait(10)
 driver.get("https://www.instagram.com/")
 
 
