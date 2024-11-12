@@ -51,7 +51,7 @@ driver = webdriver.Chrome(options=options)
  
 
 driver.get("https://www.instagram.com/")
-
+st.title("Fase 1 pasada")
 
 try:
 
@@ -61,7 +61,7 @@ try:
 
     allow_all_cookies_button = driver.find_element(By.XPATH, "//button[contains(text(),'Permitir todas las cookies') or contains(text(), 'Aceptar todas')]")
     allow_all_cookies_button.click()
-    st.title("Fase 1 pasada")
+    
     time.sleep(10)
     driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[1]/div/label/input').send_keys(user)
     driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys(passwd)
