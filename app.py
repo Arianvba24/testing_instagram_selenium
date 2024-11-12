@@ -56,7 +56,7 @@ driver.get("https://www.instagram.com/")
 try:
 
 # "_a9-- _ap36 _a9_0"
-    time.sleep(10)
+    time.sleep(20)
     # st.code(driver.page_source)
 
     allow_all_cookies_button = driver.find_element(By.XPATH, "//button[contains(text(),'Permitir todas las cookies') or contains(text(), 'Aceptar todas')]")
@@ -72,7 +72,7 @@ try:
     #     json.dump(data_cookies,j)
 
     time.sleep(15)
-    st.title("Comida")
+    st.title("Fase 1 pasada")
 
 
     driver.get(r"https://www.instagram.com/herasmedia/reels/")
