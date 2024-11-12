@@ -51,12 +51,13 @@ driver = webdriver.Chrome(options=options)
  
 
 driver.get("https://www.instagram.com/")
-st.title("Fase 1 pasada")
+# st.title("Fase 1 pasada")
 
 try:
 
 # "_a9-- _ap36 _a9_0"
     time.sleep(20)
+    st.title("Fase 1 pasada")
     # st.code(driver.page_source)
 
     allow_all_cookies_button = driver.find_element(By.XPATH, "//button[contains(text(),'Permitir todas las cookies') or contains(text(), 'Aceptar todas')]")
