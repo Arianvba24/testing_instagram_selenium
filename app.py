@@ -27,9 +27,9 @@ def get_driver():
         options=options,
     )
 
-options = webdriver.ChromeOptions()
-options.add_argument("--disable-gpu")
-options.add_argument("--headless")
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("--disable-gpu")
+chrome_options.add_argument("--headless")
 chrome_options.add_argument('--disable-extensions')
 chrome_options.add_argument('--ignore-certificate-errors-spki-list')
 chrome_options.add_argument("--disable-blink-features=AutomationControlled")
