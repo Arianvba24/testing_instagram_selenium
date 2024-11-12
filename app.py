@@ -59,6 +59,7 @@ try:
 
 # "_a9-- _ap36 _a9_0"
     time.sleep(10)
+    st.code(driver.page_source)
 
     allow_all_cookies_button = driver.find_element(By.XPATH, "//button[contains(text(),'Permitir todas las cookies') or contains(text(), 'Aceptar todas')]")
     allow_all_cookies_button.click()
