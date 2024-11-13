@@ -42,7 +42,7 @@ driver.implicitly_wait(10)
 def login_to_instagram(driver, user, passwd):
     try:
         driver.get("https://www.instagram.com/")
-        time.sleep(5)
+        time.sleep(15)
         
         # Aceptar cookies
         try:
@@ -55,7 +55,7 @@ def login_to_instagram(driver, user, passwd):
         driver.find_element(By.NAME, "username").send_keys(user)
         driver.find_element(By.NAME, "password").send_keys(passwd)
         driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[3]/button').click()
-        time.sleep(10)
+        time.sleep(20)
         
         st.write("Login exitoso.")
     except Exception as e:
