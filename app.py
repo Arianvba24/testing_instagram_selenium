@@ -13,10 +13,16 @@ from urllib3.util.retry import Retry
 from requests.adapters import HTTPAdapter
 from requests import Session
 
-session = Session()
-retries = Retry(total=3, backoff_factor=1, status_forcelist=[500, 502, 503, 504])
-session.mount('https://', HTTPAdapter(max_retries=retries))
 
+retry_strategy = Retry(
+    total=3,  # Número de reintentos
+    status_forcelist=[429, 500, 502, 503, 504],
+    method_whitelist=["HEAD", "GET", "OPTIONS"]
+)
+adapter = HTTPAdapter(max_retries=retry_strategy)
+http = requests.Session()
+http.mount("https://", adapter)
+http.mount("http://", adapte
 
 @st.cache_resource
 def get_driver():
