@@ -9,6 +9,14 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.os_manager import ChromeType
+from urllib3.util.retry import Retry
+from requests.adapters import HTTPAdapter
+from requests import Session
+
+session = Session()
+retries = Retry(total=3, backoff_factor=1, status_forcelist=[500, 502, 503, 504])
+session.mount('https://', HTTPAdapter(max_retries=retries))
+
 
 @st.cache_resource
 def get_driver():
@@ -24,6 +32,7 @@ def get_driver():
         service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()),
         options=options
     )
+    
     return driver
 
 # Configura el driver y navega a Instagram
