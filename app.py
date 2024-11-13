@@ -22,7 +22,7 @@ retry_strategy = Retry(
 adapter = HTTPAdapter(max_retries=retry_strategy)
 http = requests.Session()
 http.mount("https://", adapter)
-http.mount("http://", adapte
+http.mount("http://", adapter)
 
 @st.cache_resource
 def get_driver():
